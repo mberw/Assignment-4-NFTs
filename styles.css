@@ -1,87 +1,115 @@
 /* Styles for entire body */
 body {
-    padding: 0;
-    margin: 0;
+  padding: 0;
+  margin: 0;
 }
-
-
 
 /*MAIN CONTAINER */
 .container {
-    display: grid;
-    height: 100vh;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: .2fr 1.5fr 1.5fr 1.5fr 1.5fr;
-    grid-template-areas: 
+  display: grid;
+  height: 100vh;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 0.2fr 1.5fr 1.5fr 1.5fr 1.5fr;
+  grid-template-areas:
     "nav nav nav"
     "main main main"
     "container1 container2 container3"
     "container4 container4 container4"
-    "footer footer footer"
-    ;
+    "footer footer footer";
 }
 
 nav {
-    background-color: aqua;
-    grid-area: nav;
-    position: fixed;
-    top: 0px;
-    left: 0px;
-    width: 100%;
-    padding: 0;
-    margin: 0;
+  background-color: #705d71;
+  grid-area: nav;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  padding: 0;
+  margin: 0;
 }
-
-main {
-    background-color:brown;
-    grid-area: main;
-    width: 100%;
-}
-
-#container1 {
-    background-color: beige;
-    grid-area: container1;
-}
-
-#container2 {
-    background-color: beige;
-    grid-area: container2;
-}
-
-#container3 {
-    background-color: beige;
-    grid-area: container3;
-}
-
-#container4 {
-    background-color:blue;
-    grid-area: container4;
-}
-
-footer {
-    background-color: blueviolet;
-    grid-area: footer;
-    width: 100%;
-}
-
 
 #top {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    max-width: 1300px;
+  display: flex;
+  align-items: center;
+  /* max-width: 1300px; */
+}
+
+#logo-box {
+  background-color: #705d71;
+  width: 50%;
+  justify-content: right;
+  align-items: right;
+  float: right;
 }
 
 #logo {
-    background-color: blue;
-    width: 50%;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  background-color: #705d71;
+  width: 50%;
+  justify-content: left;
+  float: right;
+  font-family: "Antonio", sans-serif;
+  font-size: 2.5em;
+  color: #ef972d;
+}
+
+#link-box {
+  background-color: #705d71;
+  width: 50%;
+  justify-content: center;
 }
 
 #links {
-    background-color: chartreuse;
-    width: 50%;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  background-color: #705d71;
+  width: 50%;
+  justify-content: right;
+}
+
+main {
+  background-color: brown;
+  grid-area: main;
+  width: 100%;
+}
+
+#main-content-area {
+  background-color: #a2e5f5;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#ape-image {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+#container1 {
+  background-color: beige;
+  grid-area: container1;
+}
+
+#container2 {
+  background-color: beige;
+  grid-area: container2;
+}
+
+#container3 {
+  background-color: beige;
+  grid-area: container3;
+}
+
+#container4 {
+  background-color: blue;
+  grid-area: container4;
+}
+
+footer {
+  background-color: blueviolet;
+  grid-area: footer;
+  width: 100%;
 }
