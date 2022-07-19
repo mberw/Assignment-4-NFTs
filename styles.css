@@ -1,0 +1,87 @@
+/* Styles for entire body */
+body {
+    padding: 0;
+    margin: 0;
+}
+
+
+
+/*MAIN CONTAINER */
+.container {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: .2fr 1.5fr 1.5fr 1.5fr 1.5fr;
+    grid-template-areas: 
+    "nav nav nav"
+    "main main main"
+    "container1 container2 container3"
+    "container4 container4 container4"
+    "footer footer footer"
+    ;
+}
+
+nav {
+    background-color: aqua;
+    grid-area: nav;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+main {
+    background-color:brown;
+    grid-area: main;
+    width: 100%;
+}
+
+#container1 {
+    background-color: beige;
+    grid-area: container1;
+}
+
+#container2 {
+    background-color: beige;
+    grid-area: container2;
+}
+
+#container3 {
+    background-color: beige;
+    grid-area: container3;
+}
+
+#container4 {
+    background-color:blue;
+    grid-area: container4;
+}
+
+footer {
+    background-color: blueviolet;
+    grid-area: footer;
+    width: 100%;
+}
+
+
+#top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 1300px;
+}
+
+#logo {
+    background-color: blue;
+    width: 50%;
+    align-items: center;
+    justify-content: center;
+}
+
+#links {
+    background-color: chartreuse;
+    width: 50%;
+    align-items: center;
+    justify-content: center;
+}
