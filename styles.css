@@ -72,7 +72,6 @@ nav {
 }
 
 main {
-  background-color: brown;
   grid-area: main;
   width: 100%;
 }
@@ -151,12 +150,44 @@ main {
 #sad-punk-image {
   max-width: 100%;
   max-height: 100%;
-  object-position: bottom;
 }
+
 footer {
-  background-color: blueviolet;
+  background-color: #a2e5f5;
   grid-area: footer;
   width: 100%;
+}
+
+#footer-container {
+  display: flex;
+  justify-content: center;
+
+  gap: 70px;
+  padding: 10px;
+}
+
+#footer-left {
+  width: 500px;
+}
+
+#footer-left-ul {
+  list-style: none;
+  text-align: right;
+  font-family: "Merriweather", serif;
+  font-size: 18px;
+  color: grey;
+}
+
+#footer-right-ul {
+  list-style: none;
+  text-align: left;
+  font-family: "Merriweather", serif;
+  font-size: 18px;
+  color: grey;
+}
+
+#footer-right {
+  width: 500px;
 }
 
 /* UNDERLINE EFFECT ON HOVER FOR NAV LINKS */
@@ -165,10 +196,11 @@ footer {
   position: relative;
 }
 
-.underline-main {
-  font-family: "Lora", serif;
-  text-decoration: none;
+.underline-footer {
+  font-family: "Merriweather", serif;
+  font-size: 18px;
   color: #333;
+  position: relative;
 }
 
 a {
@@ -187,16 +219,120 @@ a {
   transition: width 0.6s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
-.underline-main {
-  font-family: "Lora", serif;
-  text-decoration: none;
-  color: #333;
-}
-
 @media (hover: hover) and (pointer: fine) {
   .underline:hover::before {
     left: 0;
     right: auto;
     width: 100%;
   }
+}
+
+/*FOOTER HOVER EFFECT FOR LINKS */
+.underline-footer {
+  font-family: "Merriweather", serif;
+  font-size: 18px;
+  color: grey;
+  position: relative;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.underline-footer::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 0;
+  height: 2px;
+  background-color: lightsalmon;
+  transition: width 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .underline-footer:hover::before {
+    left: 0;
+    right: auto;
+    width: 100%;
+  }
+}
+
+/*
+--------------------------------------------------------------------
+LEARNINGS CONTAINER (learnings.html)
+--------------------------------------------------------------------
+*/
+.learnings-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 50px 100vh 50px; /*repeat(5, 1fr);*/
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+
+  grid-template-areas:
+    "learnings-nav" "learnings-nav" "learnings-nav"
+    "learnings-main" "learnings-main" "learnings-main"
+    "learnings-footer" "learnings-footer" "learnings-footer";
+}
+
+.learnings-nav {
+  grid-area: 1 / 1 / 2 / 4;
+  background-color: #705d71;
+  height: 50px;
+}
+.learnings-main {
+  grid-area: 2 / 1 / 5 / 4;
+  background-color: beige;
+  min-height: 100vh;
+  padding: 0;
+  margin: 0;
+}
+
+.learnings-main-content {
+  display: flex;
+  min-height: 100%;
+  flex: 0 1 1200px;
+  justify-content: center;
+}
+
+/*.learnings-main-content {
+  display: flex;
+  justify-content: center;
+  flex-basis: 100%;
+  padding: 20px;
+  background-color: #ef972d;
+}*/
+
+#learnings-main-content-area1 {
+  background-color: burlywood;
+  width: 400px;
+  padding: 20px;
+}
+
+#learnings-main-content-area2 {
+  background-color: beige;
+  width: 400px;
+  padding: 20px;
+}
+
+.learnings-footer {
+  grid-area: 5 / 1 / 6 / 4;
+  background-color: #705d71;
+  height: 50px;
+}
+
+#p {
+  text-align: right;
+  font-family: "Merriweather", serif;
+  font-size: 18px;
+  color: #333;
+}
+
+#p-right {
+  text-align: left;
+  font-family: "Merriweather", serif;
+  font-size: 18px;
+  color: #333;
 }
