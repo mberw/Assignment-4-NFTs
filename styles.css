@@ -323,6 +323,18 @@ LEARNINGS CONTAINER (learnings.html)
   height: 50px;
 }
 
+#howto-main-content-area1 {
+  background-color: beige;
+  width: 400px;
+  padding: 20px;
+}
+
+#howto-main-content-area2 {
+  background-color: #a2e5f5;
+  width: 400px;
+  padding: 20px;
+}
+
 #p {
   text-align: right;
   font-family: "Merriweather", serif;
@@ -331,6 +343,37 @@ LEARNINGS CONTAINER (learnings.html)
 }
 
 #p-right {
+  text-align: left;
+  font-family: "Merriweather", serif;
+  font-size: 18px;
+  color: #333;
+}
+
+/*
+--------------------------------------------------------------------
+REFERENCES CONTAINER (references.html)
+--------------------------------------------------------------------
+*/
+
+#references-main-content-area {
+  background-color: beige;
+  height: 100vh;
+}
+
+#references-container1 {
+  background-color: beige;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  flex: 1 0 0;
+  row-gap: 0;
+  margin-top: 50px;
+  max-width: 1200px;
+}
+
+#p-ref {
   text-align: left;
   font-family: "Merriweather", serif;
   font-size: 18px;
